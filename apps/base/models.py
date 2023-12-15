@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Settings(models.Model):
     title = models.CharField(
@@ -19,7 +19,7 @@ class Settings(models.Model):
     )
     email = models.EmailField(
         verbose_name="Электронная почта",
-        null=True,blank=true
+        null=True,blank=True
     )
     address = models.CharField(
         max_length=255,
@@ -71,15 +71,12 @@ class Directors(models.Model):
         max_length=100,
         verbose_name="Заголовок"
     )
-    image_1 = models.ImageField(
+    image = models.ImageField(
         upload_to='image_1/',
         verbose_name="Фото 1"
     )
-    image_2 = models.ImageField(
-        upload_to='image_2/',
-        verbose_name="Фото 2"
-    )
-    description = models.RichTextField(
+    
+    description = RichTextField(
         verbose_name = "Текст"
     )
 

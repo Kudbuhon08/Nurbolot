@@ -4,7 +4,7 @@ from apps.base.models import Settings, Projects, Directors
 
 @admin.register(Settings)
 class BaseAdmin(admin.ModelAdmin):
-    list_display = ['title', 'descriptions', 'logo', 'email', 'contact', 'address', 'instagram', 'whatsapp', 'facebook', 'youtube']
+    list_display = ['title', 'description', 'logo', 'email', 'contact', 'address', 'instagram', 'whatsapp', 'facebook', 'youtube']
 
 @admin.register(Projects)
 class BaseAdmin(admin.ModelAdmin):
@@ -12,4 +12,4 @@ class BaseAdmin(admin.ModelAdmin):
 
 @admin.register(Directors)
 class BaseAdmin(admin.ModelAdmin):
-    list_display = ['title', 'image_1', 'image_2', 'description']
+    list_display = ['title', 'image', 'description']
